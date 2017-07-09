@@ -54,7 +54,7 @@ He's mostly retired today.`
 Use
 
 ```
-ruby -I ./test test/test_json_next.rb
+ruby -I ./test test/test_json.rb
 ```
 
 to run selected / individual test or to run
@@ -69,10 +69,16 @@ rake test
 Resulting in:
 
 ```
-...
+** directory: ./hanson/
+  sample1.txt
+  reading ./hanson/sample1.txt ...
+** directory: ./son/
+  sample1.txt
+  reading ./son/sample1.txt ...
+
 ...
 
-Finished in 5.104933s, 0.1959 runs/s, 79.1391 assertions/s.
+Finished in 0.055852s, 17.9044 runs/s, 35.8088 assertions/s.
 
-1 runs, 404 assertions, 0 failures, 0 errors, 0 skips
+1 runs, 2 assertions, 0 failures, 0 errors, 0 skips
 ```
