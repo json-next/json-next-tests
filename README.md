@@ -1,7 +1,7 @@
 
 # Tests, Tests, Tests
 
-Next generation JSON versions (HanSON, SON, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more
+Next generation JSON versions (HanSON, SON, JSONX/JSON11, etc.) with comments, unquoted keys, multi-line strings, trailing commas, optional commas, and more
 
 
 ## Usage
@@ -72,13 +72,18 @@ Resulting in:
 ** directory: ./hanson/
   sample1.txt
   reading ./hanson/sample1.txt ...
+** directory: ./jsonx/
+  sample1.txt
+  reading ./jsonx/sample1.txt ...
+  sample2.txt
+  reading ./jsonx/sample2.txt ...
 ** directory: ./son/
   sample1.txt
   reading ./son/sample1.txt ...
 
 ...
 
-Finished in 0.055852s, 17.9044 runs/s, 35.8088 assertions/s.
+Finished in 0.065054s, 15.3719 runs/s, 61.4878 assertions/s.
 
-1 runs, 2 assertions, 0 failures, 0 errors, 0 skips
+1 runs, 4 assertions, 0 failures, 0 errors, 0 skips
 ```

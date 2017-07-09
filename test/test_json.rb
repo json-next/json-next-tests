@@ -66,6 +66,8 @@ def read_test( path )
            assert_equal JSON.parse( json_yeold_text ), HANSON.parse( json_next_text )
          elsif path =~ %r{/son/}
            assert_equal JSON.parse( json_yeold_text ), SON.parse( json_next_text )
+         elsif path =~ %r{/jsonx/}
+           assert_equal JSON.parse( json_yeold_text ), JSONX.parse( json_next_text )
          else
            puts "!!!! unknown json next format in #{path} !!!"
            exit 1
