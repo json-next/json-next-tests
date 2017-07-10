@@ -15,7 +15,7 @@ class TestJson < MiniTest::Test
      walk_tests( '.' )
 
      ## read_tests( './hanson/*' )
-     ## read_tests( './son/sample*' )
+     ## read_tests( './jsonx/geojson*' )
   end  # method test_all
 
 
@@ -63,16 +63,30 @@ def read_test( path )
          ##
          ## puts "*** assert #{path}"
          if path =~ %r{/hanson/}
-           assert_equal JSON.parse( json_yeold_text ), HANSON.parse( json_next_text )
+           assert_json JSON.parse( json_yeold_text ), HANSON.parse( json_next_text )
          elsif path =~ %r{/son/}
-           assert_equal JSON.parse( json_yeold_text ), SON.parse( json_next_text )
+           assert_json JSON.parse( json_yeold_text ), SON.parse( json_next_text )
          elsif path =~ %r{/jsonx/}
-           assert_equal JSON.parse( json_yeold_text ), JSONX.parse( json_next_text )
+           assert_json JSON.parse( json_yeold_text ), JSONX.parse( json_next_text )
          else
            puts "!!!! unknown json next format in #{path} !!!"
            exit 1
          end
        end
+end # method read_test
+
+
+def assert_json( l, r )
+  ## for debugging; first assert equal pretty printed version
+  lpp = JSON.pretty_generate( l )
+  rpp = JSON.pretty_generate( r )
+
+  ## puts lpp
+  ## puts "<<< --- >>>"
+  ## puts rpp
+
+  assert_equal lpp, rpp
+  assert_equal l, r
 end
 
 end # class TestJson
