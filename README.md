@@ -46,7 +46,7 @@ He's mostly retired today.`
 }
 ```
 
-(Source: [`hanson/sample1.txt`](https://github.com/datatxt/json-next-tests/blob/master/hanson/sample1.txt))
+(Source: [`hanson/sample1.txt`](https://github.com/jsonii/json-next-tests/blob/master/hanson/sample1.txt))
 
 
 ## Run Tests
